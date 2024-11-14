@@ -5,9 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from "@/components/ui/dialog"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Info } from 'lucide-react'
-import { useRouter } from 'next/navigation'
 
 type Category = 'who' | 'where' | 'when'
 
@@ -158,7 +156,6 @@ export function CreativeSessionForm() {
   const [whatOptions, setWhatOptions] = useState<{left: string[], right: string[]}>({left: [], right: []})
   const [how, setHow] = useState('')
   const [open, setOpen] = useState(false)
-  const [currentTab, setCurrentTab] = useState<Category>('who')
   const [feedback, setFeedback] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
 
