@@ -289,7 +289,7 @@ export function CreativeSessionForm() {
       setFeedback(data.feedback);
     } catch (error) {
       console.error('Error getting feedback:', error);
-      setFeedback(`フィードバックの取得中にエラーが発生しました。エラー: ${error.message}`);
+      setFeedback(`フィードバックの取得中にエラーが発生しました。エラー: ${ error instanceof Error ? error.message : '不明なエラー' }`);
     } finally {
       setIsLoading(false);
     }
