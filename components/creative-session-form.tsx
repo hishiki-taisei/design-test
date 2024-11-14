@@ -263,7 +263,7 @@ export function CreativeSessionForm() {
       Where: ${modifiers.where}${selections.where}
       When: ${modifiers.when}${selections.when}
 
-      Why（願望）: ${why}
+      Why（なぜ困っていて、何を叶えたいのかの願望）: ${why}
 
       What（解決手段）: ${what.left} ${what.right}
 

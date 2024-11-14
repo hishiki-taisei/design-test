@@ -20,7 +20,7 @@ export function TitleScreen() {
             本質的な課題を発見し解決策を考え出す力である<br />「デザイン思考力」を測定します。
             </p>
             <p className="text-sm text-gray-500">
-              ※ セッション時間の目安：15-20分
+              ※ このテストはデザイン思考力を測定するものであり、正解・不正解はありません。
             </p>
           </div>
           <Button 

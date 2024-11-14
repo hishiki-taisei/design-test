@@ -32,8 +32,9 @@ export async function POST(request: Request) {
 
 
       評価の際は以下の項目に気を付けてください。
-        - アイデアの独創性
-        - 実現可能性
+        - そのシチュエーション（who,where,when）における課題、ニーズを考えられているか
+        - その課題、ニーズに対して、何を用いてどのような解決案(how)を提示しているか
+        - アイデアの独創性および実現可能性
         - 願望（Why）と解決案（How）の一貫性
         
       回答は以下のフォーマットで提供してください：
@@ -51,18 +52,20 @@ export async function POST(request: Request) {
       【総合スコア】
       XX/100点
 
-      【Whoからの感想】
+      【〇〇からのコメント】
+        - 〇〇からのコメントというタイトルはコメントをくれた人(who)の名前に置き換えてください
+        - whoになりきって、コメントを書いてください
         - アイデアを受けての感想
         - どのような点が印象的だったか
         - どのような点が改善の余地があるか
         - その他のコメント
-        - whoからの感想というタイトルはwhoの部分を評価者の名前に置き換えてください
+
 
       
 
     `);
     const response = await result.response;
-    const feedback = prompt + response.text();
+    const feedback = response.text();
 
     return NextResponse.json({ feedback });
   } catch (error) {
